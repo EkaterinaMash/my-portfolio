@@ -1,0 +1,28 @@
+.cardContent {
+  display: flex;
+  gap: 3rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.projectImage {
+  width: 40rem;
+  height: auto;
+}
+
+.cardSubtitle {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+}
+.cardSubtitle .technologyName {
+  color: darkslategray;
+  font-size: 1.4rem;
+}
+.cardSubtitle Button {
+  color: whitesmoke;
+  background-color: darkslategray;
+}
+
+/*# sourceMappingURL=Project.css.map */
