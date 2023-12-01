@@ -6,15 +6,17 @@ function App() {
 
     return (
         <div className="App">
-            <ul>
-                {projects.map(project => (
-                    <li key={project.id}>
-                        <Project
-                            project={project}
+            <section className="projectsSection">
+                <ul className="projects">
+                    {projects.map(project => (
+                        <li key={project.id}>
+                            <Project
+                                project={project}
                             />
-                    </li>
-                ))}
-            </ul>
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </div>
     );
 }

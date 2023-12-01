@@ -8,6 +8,18 @@
 .projectImage {
   width: 40rem;
   height: auto;
+  border-radius: 0.5rem;
+  border: 0.5rem solid black;
+}
+@media (max-width: 550px) {
+  .projectImage {
+    width: 30rem;
+  }
+}
+@media (max-width: 350px) {
+  .projectImage {
+    width: 25rem;
+  }
 }
 
 .cardSubtitle {
@@ -20,7 +32,16 @@
   color: darkslategray;
   font-size: 1.4rem;
 }
-.cardSubtitle Button {
+
+.optionsList {
+  padding-left: 2rem;
+}
+
+.projectOption {
+  list-style-type: disc;
+}
+
+Button {
   color: whitesmoke;
   background-color: darkslategray;
 }

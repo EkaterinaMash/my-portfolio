@@ -1,6 +1,7 @@
 import {Card, CardActions, CardContent} from "@mui/material";
 import './Project.css';
-import Button from '@mui/material/Button'
+import Button from '@mui/material/Button';
+import ProjectLink from "./ProjectLink";
 
 function Project(props) {
     const title = props.project.title;
@@ -10,7 +11,6 @@ function Project(props) {
     const options = props.project.options;
     const demoLink = props.project.demoLink;
     const githubLink = props.project.githubLink;
-    console.log(imagePath);
 
     return (
         <Card>
@@ -32,32 +32,26 @@ function Project(props) {
                         </ul>
                     </h5>
                     <p>{description}</p>
-                    <ul>
+                    <ul className="optionsList">
                         {options.map((option, index) => (
-                            <li key={index}>{option}</li>
+                            <li
+                                key={index}
+                                className="projectOption">
+                                {option}
+                            </li>
                         ))}
                     </ul>
                 </div>
             </CardContent>
             <CardActions>
-                <Button
-                    href={demoLink}
-                    variant='text'
-                    size='large'
-                    className='projectLink'
-                    sx={{
-                        color: 'whitesmoke',
-                        background: 'darkslategray'
-                    }}>
-                    Demo
-                </Button>
-                <Button
-                    href={githubLink}
-                    variant='text'
-                    size='large'
-                    className='projectLink'>
-                    GitHub
-                </Button>
+                <ProjectLink
+                    linkHref={demoLink}
+                    linkText='Demo'>
+                </ProjectLink>
+                <ProjectLink
+                    linkHref={githubLink}
+                    linkText='GitHub'>
+                </ProjectLink>
             </CardActions>
         </Card>
     )
