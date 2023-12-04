@@ -1,8 +1,11 @@
+.card {
+  display: grid;
+}
+
 .cardContent {
   display: flex;
   gap: 3rem;
-  padding: 1rem;
-  align-items: center;
+  color: inherit;
 }
 
 .projectImage {
@@ -41,9 +44,8 @@
   list-style-type: disc;
 }
 
-Button {
-  color: whitesmoke;
-  background-color: darkslategray;
+.cardActions {
+  justify-content: center;
 }
 
 /*# sourceMappingURL=Project.css.map */

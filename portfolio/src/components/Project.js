@@ -14,45 +14,47 @@ function Project(props) {
 
     return (
         <Card>
-            <CardContent className="cardContent">
-                <img
-                    src={require('../assets/images/pm-app.png')}
-                    alt="Project image"
-                    className="projectImage"/>
-                <div>
-                    <h2>{title}</h2>
-                    <h5>
-                        <ul className="cardSubtitle">
-                            {technologies.map((technology, index) => (
-                                <li key={index}
-                                    className="technologyName">
-                                    {technology}
+            <div className="card">
+                <CardContent className="cardContent">
+                    <img
+                        src={require('../assets/images/pm-app.png')}
+                        alt="Project image"
+                        className="projectImage"/>
+                    <div>
+                        <h2>{title}</h2>
+                        <h5>
+                            <ul className="cardSubtitle">
+                                {technologies.map((technology, index) => (
+                                    <li key={index}
+                                        className="technologyName">
+                                        {technology}
+                                    </li>
+                                ))}
+                            </ul>
+                        </h5>
+                        <p>{description}</p>
+                        <ul className="optionsList">
+                            {options.map((option, index) => (
+                                <li
+                                    key={index}
+                                    className="projectOption">
+                                    {option}
                                 </li>
                             ))}
                         </ul>
-                    </h5>
-                    <p>{description}</p>
-                    <ul className="optionsList">
-                        {options.map((option, index) => (
-                            <li
-                                key={index}
-                                className="projectOption">
-                                {option}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </CardContent>
-            <CardActions>
-                <ProjectLink
-                    linkHref={demoLink}
-                    linkText='Demo'>
-                </ProjectLink>
-                <ProjectLink
-                    linkHref={githubLink}
-                    linkText='GitHub'>
-                </ProjectLink>
-            </CardActions>
+                    </div>
+                </CardContent>
+                <CardActions className="cardActions">
+                    <ProjectLink
+                        linkHref={demoLink}
+                        linkText='Demo'>
+                    </ProjectLink>
+                    <ProjectLink
+                        linkHref={githubLink}
+                        linkText='GitHub'>
+                    </ProjectLink>
+                </CardActions>
+            </div>
         </Card>
     )
 }

@@ -9,7 +9,9 @@ function App() {
             <section className="projectsSection">
                 <ul className="projects">
                     {projects.map(project => (
-                        <li key={project.id}>
+                        <li
+                            className="project"
+                            key={project.id}>
                             <Project
                                 project={project}
                             />
