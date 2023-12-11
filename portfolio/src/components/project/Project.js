@@ -1,7 +1,7 @@
 import {Card, CardActions, CardContent} from "@mui/material";
 import './Project.css';
 import Button from '@mui/material/Button';
-import ProjectLink from "./ProjectLink";
+import ProjectLink from "../project-link/ProjectLink";
 
 function Project(props) {
     const title = props.project.title;
@@ -17,7 +17,7 @@ function Project(props) {
             <div className="card">
                 <CardContent className="cardContent">
                     <img
-                        src={require('../assets/images/pm-app.png')}
+                        src={require('../../assets/images/pm-app.png')}
                         alt="Project image"
                         className="projectImage"/>
                     <div>
