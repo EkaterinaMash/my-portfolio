@@ -2,6 +2,7 @@ import {AppBar, Link, Toolbar, IconButton, Menu, MenuItem} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import './Header.css';
+import Navigation from '../navigation/Navigation'
 import {useState} from "react";
 
 function Header() {
@@ -46,31 +47,39 @@ function Header() {
                         id="navigation"
                         open={menuOpened}
                         anchorEl={anchorEl}
+                        disableScrollLock
+                        sx={{
+                            '& .MuiPaper-root': {
+                                backgroundColor: '#10444d',
+                                width: '15rem',
+                                padding: '1rem 1rem 3rem'
+                            },
+                            '& .MuiList-root': {
+                                display: 'grid',
+                                padding: 0
+                            }
+                        }}
                     >
                         <IconButton
                             onClick={closeMenu}
-                        >
-                            <CloseIcon/>
+                            sx={{
+                                justifySelf: 'end',
+                                width: '3rem'
+                            }}>
+                            <CloseIcon
+                                sx={{
+                                    color: '#fff'
+                                }}/>
                         </IconButton>
-                        <MenuItem>About me</MenuItem>
-                        <MenuItem>My projects</MenuItem>
+                        <Navigation isVertical={true}/>
                     </Menu>
 
                     <p>Ekaterina Mashinskaia</p>
                     <Toolbar
                         sx={{
                             display: {sm: 'none', md: 'flex'},
-                            gap: '2rem',
                         }}>
-                        <Link
-                            href="#"
-                            sx={{
-                                color: '#fff'
-                            }}>About me</Link>
-                        <Link href="#"
-                              sx={{
-                                  color: '#fff'
-                              }}>My projects</Link>
+                        <Navigation isVertical={false}/>
                     </Toolbar>
                 </Toolbar>
             </AppBar>
