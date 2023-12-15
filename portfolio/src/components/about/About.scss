@@ -1,0 +1,66 @@
+.about {
+  background: whitesmoke;
+  padding: 7rem;
+  height: calc(100vh - 64px);
+
+  h2, h3, p, ul {
+    color: inherit;
+  }
+
+  h2, h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    @media (max-width: 1200px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    @media (max-width: 1200px) {
+      font-size: 2.6rem;
+    }
+  }
+
+  p, ul {
+    font-size: 2.6rem;
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1440px) {
+      font-size: 2.2rem;
+    }
+    @media (max-width: 1200px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 992px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    li:not(:last-child)::after {
+      content: '';
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: black;
+      border-radius: 0.5rem;
+    }
+  }
+}

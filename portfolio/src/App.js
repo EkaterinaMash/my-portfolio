@@ -1,26 +1,17 @@
 import './App.css';
-import {projects} from "./projects";
-import Project from "./components/project/Project";
+import Projects from "./components/projects/Projects";
 import Header from "./components/header/Header";
+import Home from './components/home/Home';
+import About from './components/about/About';
 
 function App() {
 
     return (
         <div className="App">
             <Header/>
-            <section className="projectsSection">
-                <ul className="projects">
-                    {projects.map(project => (
-                        <li
-                            className="project"
-                            key={project.id}>
-                            <Project
-                                project={project}
-                            />
-                        </li>
-                    ))}
-                </ul>
-            </section>
+            <Home/>
+            <About/>
+            <Projects/>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-import {AppBar, Link, Toolbar, IconButton, Menu, MenuItem} from "@mui/material";
+import {AppBar, Toolbar, IconButton, Menu} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import './Header.css';
@@ -24,7 +24,7 @@ function Header() {
             <AppBar
                 position="sticky"
                 sx={{
-                    backgroundColor: 'black'
+                    backgroundColor: '#03262b'
                 }}>
                 <Toolbar
                     sx={{
@@ -40,7 +40,7 @@ function Header() {
                             sx={{
                                 width: 40,
                                 height: 40,
-                                color: '#fff'
+                                color: '#dde9eb'
                             }}/>
                     </IconButton>
                     <Menu
@@ -68,7 +68,7 @@ function Header() {
                             }}>
                             <CloseIcon
                                 sx={{
-                                    color: '#fff'
+                                    color: '#dde9eb'
                                 }}/>
                         </IconButton>
                         <Navigation isVertical={true}/>

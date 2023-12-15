@@ -1,0 +1,71 @@
+.about {
+  background: whitesmoke;
+  padding: 7rem;
+  height: calc(100vh - 64px);
+}
+.about h2, .about h3, .about p, .about ul {
+  color: inherit;
+}
+.about h2, .about h3 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem;
+}
+.about h2 {
+  font-size: 4rem;
+}
+@media (max-width: 1200px) {
+  .about h2 {
+    font-size: 3.2rem;
+  }
+}
+.about h3 {
+  font-size: 3rem;
+}
+@media (max-width: 1200px) {
+  .about h3 {
+    font-size: 2.6rem;
+  }
+}
+.about p, .about ul {
+  font-size: 2.6rem;
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1440px) {
+  .about p, .about ul {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 1200px) {
+  .about p, .about ul {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .about p, .about ul {
+    font-size: 1.8rem;
+  }
+}
+.about .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.about .skills li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.about .skills li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+
+/*# sourceMappingURL=About.css.map */

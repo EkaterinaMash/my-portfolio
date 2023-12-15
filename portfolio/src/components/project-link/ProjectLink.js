@@ -6,7 +6,7 @@ const linkTheme = createTheme({
         primary: {
             main: '#04191c',
             light: '#0a4d52',
-            contrastText: '#f0f9fa',
+            contrastText: '#dde9eb',
         }
     },
     typography: {
@@ -25,6 +25,7 @@ const StyledLink = styled(Button)(({theme}) => ({
     background: theme.palette.primary.main,
     color: theme.palette.primary.contrastText,
     fontWeight: theme.typography.fontWeightRegular,
+    width: 100,
     '&:hover': {
         background: theme.palette.primary.light
     }

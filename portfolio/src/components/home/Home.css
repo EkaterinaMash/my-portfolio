@@ -1,0 +1,12 @@
+.homeSection {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2rem;
+  height: calc(100vh - 64px);
+  padding: 2rem 2rem 4rem;
+  box-sizing: border-box;
+  background: #dde9eb;
+}
+
+/*# sourceMappingURL=Home.css.map */
